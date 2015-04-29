@@ -9,32 +9,39 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import eric.hork.Workout.WorkoutTop;
+
 
 public class AddWorkout extends ActionBarActivity {
 
-    Button mButton;
-    EditText mEdit;
+        Button mButton;
+        EditText mEdit;
+        WorkoutTop workoutTop;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_workout);
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_add_workout);
 
-        mButton = (Button) findViewById(R.id.addButton);
-        mEdit = (EditText) findViewById(R.id.addEditText);
+            mButton = (Button) findViewById(R.id.addButton);
+            mEdit = (EditText) findViewById(R.id.addEditText);
 
-        mButton.setOnClickListener(
-            new View.OnClickListener()
-            {
-                public void onClick(View view)
+            mButton.setOnClickListener(
+                new View.OnClickListener()
                 {
-                    Log.v("EditText", mEdit.getText().toString());
-                }
-            }
-        );
-        mEdit.clearFocus();
+                    public void onClick(View view)
+                    {
+                        Log.v("This works: ", mEdit.getText().toString());
+                        if (!(mEdit.getText().toString().equals(""))) {
+                            workoutTop.setName(mEdit.getText().toString());
+                            Log.v("Never gets here:", workoutTop.getName());
+                        }
 
-    }
+                    }
+                }
+            );
+
+
+        }
 
 
     @Override
