@@ -2,16 +2,38 @@ package eric.hork;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 
 public class AddWorkout extends ActionBarActivity {
+
+    Button mButton;
+    EditText mEdit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_workout);
+
+        mButton = (Button) findViewById(R.id.addButton);
+        mEdit = (EditText) findViewById(R.id.addEditText);
+
+        mButton.setOnClickListener(
+            new View.OnClickListener()
+            {
+                public void onClick(View view)
+                {
+                    Log.v("EditText", mEdit.getText().toString());
+                }
+            }
+        );
+        mEdit.clearFocus();
+
     }
 
 

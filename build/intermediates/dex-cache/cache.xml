@@ -29,5 +29,26 @@
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
         <dex dex="/home/eric/AndroidStudioProjects/Hork/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-94bbaa03ae560e454a7e6a6ec1a7bcdfda7b1402.jar" />
     </item>
+    <item
+        jar="/home/eric/Documents/Hork/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/home/eric/Documents/Hork/app/build/intermediates/pre-dexed/debug/classes-7201dc25ce53992027bf0843663811d678452649.jar" />
+    </item>
+    <item
+        jar="/home/eric/Documents/Hork/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/home/eric/Documents/Hork/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c6aee8723c684f4f4b5b6e06f90cdb3cf5d2883e.jar" />
+    </item>
+    <item
+        jar="/home/eric/Documents/Hork/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/home/eric/Documents/Hork/app/build/intermediates/pre-dexed/debug/classes-21083abffed28f0b40f4b459f8036a6b3e5c8852.jar" />
+    </item>
 
 </items>
