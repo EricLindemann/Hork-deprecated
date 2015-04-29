@@ -2,7 +2,6 @@ package eric.hork;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,7 +15,7 @@ public class AddWorkout extends ActionBarActivity {
 
         Button mButton;
         EditText mEdit;
-        WorkoutTop workoutTop;
+        WorkoutTop workoutTop = new WorkoutTop();
 
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -30,12 +29,7 @@ public class AddWorkout extends ActionBarActivity {
                 {
                     public void onClick(View view)
                     {
-                        Log.v("This works: ", mEdit.getText().toString());
-                        if (!(mEdit.getText().toString().equals(""))) {
-                            workoutTop.setName(mEdit.getText().toString());
-                            Log.v("Never gets here:", workoutTop.getName());
-                        }
-
+                        workoutTop.setName(mEdit.getText().toString());
                     }
                 }
             );
