@@ -1,4 +1,4 @@
-package eric.hork.Workout;
+package eric.hork.WorkoutClasses;
 
 import java.util.ArrayList;
 

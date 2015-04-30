@@ -1,4 +1,4 @@
-package eric.hork.Workout;
+package eric.hork.WorkoutClasses;
 
 /**
  * Created by eric on 4/29/15.

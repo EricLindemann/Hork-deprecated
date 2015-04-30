@@ -16,6 +16,13 @@
         <dex dex="/home/eric/AndroidStudioProjects/Hork/app/build/intermediates/pre-dexed/debug/classes-d4496fc04bbd5322c0d77414d045dbe9e64b2d10.jar" />
     </item>
     <item
+        jar="/home/eric/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/home/eric/Documents/Hork/app/build/intermediates/pre-dexed/debug/gson-2.3-77002a0df411340003d88d098ef897ce666d9c5e.jar" />
+    </item>
+    <item
         jar="/home/eric/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"

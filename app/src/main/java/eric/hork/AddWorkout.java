@@ -1,5 +1,7 @@
 package eric.hork;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,21 +10,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import eric.hork.Workout.WorkoutTop;
+import com.google.gson.Gson;
+
+import eric.hork.WorkoutClasses.WorkoutTop;
 
 
 public class AddWorkout extends ActionBarActivity {
 
-        Button mButton;
-        EditText mEdit;
-        WorkoutTop workoutTop = new WorkoutTop();
+        private Button mButton;
+        private EditText mEdit;
+        private WorkoutTop workoutTop = new WorkoutTop();
+        private Context context;
+        private Gson gson = new Gson();
+        SharedPreferences sharedPref;
+        private String json;
 
-        protected void onCreate(Bundle savedInstanceState) {
+
+    protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_add_workout);
 
             mButton = (Button) findViewById(R.id.addButton);
             mEdit = (EditText) findViewById(R.id.addEditText);
+            context = this;
+            sharedPref = getSharedPreferences("eric.hork.myPrefs", MODE_PRIVATE);
 
             mButton.setOnClickListener(
                 new View.OnClickListener()
@@ -30,6 +41,10 @@ public class AddWorkout extends ActionBarActivity {
                     public void onClick(View view)
                     {
                         workoutTop.setName(mEdit.getText().toString());
+                        SharedPreferences.Editor editor = sharedPref.edit();
+                        json = gson.toJson(workoutTop);
+                        editor.putString("eric.hork.workoutName",json);
+                        editor.commit();
                     }
                 }
             );
